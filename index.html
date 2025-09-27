@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerador de Sugestões de Manutenção</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Gerador de Sugestões de Manutenção</h1>
+    </header>
+
+    <main>
+        <div class="activity" data-activity="painting">
+            <h2>Pintura</h2>
+            <div class="image-section">
+                <div style="display: flex; align-items: flex-start; justify-content: center; gap: 20px; flex-wrap: wrap;">
+                    <div>
+                        <h3>Antes</h3>
+                        <input type="file" accept="image/*" id="painting-before">
+                        <div id="preview-painting-before" class="image-preview"></div>
+                        <div id="suggestion-painting-before" class="suggestion-text"></div>
+                    </div>
+                    <div>
+                        <h3>Durante</h3>
+                        <input type="file" accept="image/*" id="painting-during">
+                        <div id="preview-painting-during" class="image-preview"></div>
+                        <div id="suggestion-painting-during" class="suggestion-text"></div>
+                    </div>
+                    <div>
+                        <h3>Depois</h3>
+                        <input type="file" accept="image/*" id="painting-after">
+                        <div id="preview-painting-after" class="image-preview"></div>
+                        <div id="suggestion-painting-after" class="suggestion-text"></div>
+                    </div>
+                </div>
+            </div>
+            <button onclick="showPrompt('painting')">Mostrar Sugestões</button>
+            <button onclick="gerarPDF('painting')">Gerar PDF para WhatsApp</button>
+        </div>
+
+        <div class="activity" data-activity="renovation">
+            <h2>Reforma</h2>
+            <div class="image-section">
+                <div style="display: flex; align-items: flex-start; justify-content: center; gap: 20px; flex-wrap: wrap;">
+                    <div>
+                        <h3>Antes</h3>
+                        <input type="file" accept="image/*" id="renovation-before">
+                        <div id="preview-renovation-before" class="image-preview"></div>
+                        <div id="suggestion-renovation-before" class="suggestion-text"></div>
+                    </div>
+                    <div>
+                        <h3>Durante</h3>
+                        <input type="file" accept="image/*" id="renovation-during">
+                        <div id="preview-renovation-during" class="image-preview"></div>
+                        <div id="suggestion-renovation-during" class="suggestion-text"></div>
+                    </div>
+                    <div>
+                        <h3>Depois</h3>
+                        <input type="file" accept="image/*" id="renovation-after">
+                        <div id="preview-renovation-after" class="image-preview"></div>
+                        <div id="suggestion-renovation-after" class="suggestion-text"></div>
+                    </div>
+                </div>
+            </div>
+            <button onclick="showPrompt('renovation')">Mostrar Sugestões</button>
+            <button onclick="gerarPDF('renovation')">Gerar PDF para WhatsApp</button>
+        </div>
+
+        <div class="activity" data-activity="gardening">
+            <h2>Jardinagem</h2>
+            <div class="image-section">
+                <div style="display: flex; align-items: flex-start; justify-content: center; gap: 20px; flex-wrap: wrap;">
+                    <div>
+                        <h3>Antes</h3>
+                        <input type="file" accept="image/*" id="gardening-before">
+                        <div id="preview-gardening-before" class="image-preview"></div>
+                        <div id="suggestion-gardening-before" class="suggestion-text"></div>
+                    </div>
+                    <div>
+                        <h3>Durante</h3>
+                        <input type="file" accept="image/*" id="gardening-during">
+                        <div id="preview-gardening-during" class="image-preview"></div>
+                        <div id="suggestion-gardening-during" class="suggestion-text"></div>
+                    </div>
+                    <div>
+                        <h3>Depois</h3>
+                        <input type="file" accept="image/*" id="gardening-after">
+                        <div id="preview-gardening-after" class="image-preview"></div>
+                        <div id="suggestion-gardening-after" class="suggestion-text"></div>
+                    </div>
+                </div>
+            </div>
+            <button onclick="showPrompt('gardening')">Mostrar Sugestões</button>
+            <button onclick="gerarPDF('gardening')">Gerar PDF para WhatsApp</button>
+        </div>
+
+        <div class="activity" data-activity="plumbing">
+            <h2>Hidráulica</h2>
+            <div class="image-section">
+                <div style="display: flex; align-items: flex-start; justify-content: center; gap: 20px; flex-wrap: wrap;">
+                    <div>
+                        <h3>Antes</h3>
+                        <input type="file" accept="image/*" id="plumbing-before">
+                        <div id="preview-plumbing-before" class="image-preview"></div>
+                        <div id="suggestion-plumbing-before" class="suggestion-text"></div>
+                    </div>
+                    <div>
+                        <h3>Durante</h3>
+                        <input type="file" accept="image/*" id="plumbing-during">
+                        <div id="preview-plumbing-during" class="image-preview"></div>
+                        <div id="suggestion-plumbing-during" class="suggestion-text"></div>
+                    </div>
+                    <div>
+                        <h3>Depois</h3>
+                        <input type="file" accept="image/*" id="plumbing-after">
+                        <div id="preview-plumbing-after" class="image-preview"></div>
+                        <div id="suggestion-plumbing-after" class="suggestion-text"></div>
+                    </div>
+                </div>
+            </div>
+            <button onclick="showPrompt('plumbing')">Mostrar Sugestões</button>
+            <button onclick="gerarPDF('plumbing')">Gerar PDF para WhatsApp</button>
+        </div>
+
+        <div class="activity" data-activity="electrical">
+            <h2>Elétrica</h2>
+            <div class="image-section">
+                <div style="display: flex; align-items: flex-start; justify-content: center; gap: 20px; flex-wrap: wrap;">
+                    <div>
+                        <h3>Antes</h3>
+                        <input type="file" accept="image/*" id="electrical-before">
+                        <div id="preview-electrical-before" class="image-preview"></div>
+                        <div id="suggestion-electrical-before" class="suggestion-text"></div>
+                    </div>
+                    <div>
+                        <h3>Durante</h3>
+                        <input type="file" accept="image/*" id="electrical-during">
+                        <div id="preview-electrical-during" class="image-preview"></div>
+                        <div id="suggestion-electrical-during" class="suggestion-text"></div>
+                    </div>
+                    <div>
+                        <h3>Depois</h3>
+                        <input type="file" accept="image/*" id="electrical-after">
+                        <div id="preview-electrical-after" class="image-preview"></div>
+                        <div id="suggestion-electrical-after" class="suggestion-text"></div>
+                    </div>
+                </div>
+            </div>
+            <button onclick="showPrompt('electrical')">Mostrar Sugestões</button>
+            <button onclick="gerarPDF('electrical')">Gerar PDF para WhatsApp</button>
+        </div>
+
+        <div class="activity" data-activity="carpentry">
+            <h2>Carpintaria</h2>
+            <div class="image-section">
+                <div style="display: flex; align-items: flex-start; justify-content: center; gap: 20px; flex-wrap: wrap;">
+                    <div>
+                        <h3>Antes</h3>
+                        <input type="file" accept="image/*" id="carpentry-before">
+                        <div id="preview-carpentry-before" class="image-preview"></div>
+                        <div id="suggestion-carpentry-before" class="suggestion-text"></div>
+                    </div>
+                    <div>
+                        <h3>Durante</h3>
+                        <input type="file" accept="image/*" id="carpentry-during">
+                        <div id="preview-carpentry-during" class="image-preview"></div>
+                        <div id="suggestion-carpentry-during" class="suggestion-text"></div>
+                    </div>
+                    <div>
+                        <h3>Depois</h3>
+                        <input type="file" accept="image/*" id="carpentry-after">
+                        <div id="preview-carpentry-after" class="image-preview"></div>
+                        <div id="suggestion-carpentry-after" class="suggestion-text"></div>
+                    </div>
+                </div>
+            </div>
+            <button onclick="showPrompt('carpentry')">Mostrar Sugestões</button>
+            <button onclick="gerarPDF('carpentry')">Gerar PDF para WhatsApp</button>
+        </div>
+    </main>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="app.js"></script>
+</body>
+</html>

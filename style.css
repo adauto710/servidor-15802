@@ -1,0 +1,119 @@
+/* Reduzir tamanho dos títulos das fases */
+.image-section h3 {
+    font-size: 13px;
+    margin: 4px 0 2px 0;
+    font-weight: 600;
+}
+/* Layout vertical para PDF */
+.vertical-pdf-layout {
+    flex-direction: column !important;
+    gap: 4px !important;
+    align-items: stretch !important;
+}
+/* Centralizar nome das funções/atividades */
+.activity h2 {
+/* Reduzir espaço entre título e conteúdo */
+    margin-bottom: 8px;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 0 2px 0;
+    font-weight: 600;
+}
+/* Reduzir tamanho das descrições das sugestões */
+.suggestion-text {
+    font-size: 11px;
+    line-height: 1.2;
+    max-width: 180px;
+    margin: 0 auto 4px auto;
+    word-break: break-word;
+    color: #e3f0ff;
+}
+/* Centralizar imagens */
+.image-preview {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 4px 0;
+}
+
+.image-preview img {
+    max-width: 120px;
+    max-height: 90px;
+    object-fit: contain;
+}
+
+/* Centralizar botões */
+.activity button {
+    display: block;
+    margin: 10px auto;
+}
+
+/* Ocultar botão de sugestões */
+button[onclick^="showPrompt"] {
+    display: none !important;
+}
+
+/* Centralizar seção de imagens */
+.image-section {
+    text-align: center;
+    margin-bottom: 6px;
+    margin-bottom: 4px !important;
+}
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #e3f0ff 0%, #cbe7ff 40%, #b3e0ff 70%, #e0f7fa 100%);
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: #1e3a8a;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+h1 {
+    margin: 0;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.activity {
+    background: linear-gradient(135deg, #1565c0 0%, #1976d2 100%);
+    color: #fff;
+    padding: 8px;
+    border-radius: 5px;
+    box-shadow: 0px 1px 5px rgba(0,0,0,0.08);
+    margin-bottom: 6px;
+}
+
+button {
+    padding: 10px;
+    margin-top: 10px;
+    background: #1e3a8a;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #374bb8;
+}
+
+.prompts {
+    margin-top: 10px;
+    font-size: 14px;
+    line-height: 1.5;
+    background: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+    max-height: 300px;
+    overflow-y: auto;
+}
